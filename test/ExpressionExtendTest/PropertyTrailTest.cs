@@ -17,6 +17,7 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
             SingleValues singles = new SingleValues();
             ArrayValues arrays = new ArrayValues();
 
+            Assert.Equal(nameof(singles.Char), this.PropertyTrail<SingleValues>(x => x.Char));
             Assert.Equal(nameof(singles.String), this.PropertyTrail<SingleValues>(x => x.String));
             Assert.Equal(nameof(singles.Int), this.PropertyTrail<SingleValues>(x => x.Int));
             Assert.Equal(nameof(singles.IntNull), this.PropertyTrail<SingleValues>(x => x.IntNull));
@@ -33,6 +34,7 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
             Assert.Equal(nameof(singles.Bool), this.PropertyTrail<SingleValues>(x => x.Bool));
             Assert.Equal(nameof(singles.BoolNull), this.PropertyTrail<SingleValues>(x => x.BoolNull));
 
+            Assert.Equal(nameof(arrays.Char), this.PropertyTrail<ArrayValues>(x => x.Char));
             Assert.Equal(nameof(arrays.String), this.PropertyTrail<ArrayValues>(x => x.String));
             Assert.Equal(nameof(arrays.Int), this.PropertyTrail<ArrayValues>(x => x.Int));
             Assert.Equal(nameof(arrays.Long), this.PropertyTrail<ArrayValues>(x => x.Long));
@@ -46,6 +48,7 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
         [Fact]
         public void Check_property_trail_in_subclass()
         {
+            Assert.Equal("SingleValues.Char", this.PropertyTrail<AllValues>(x => x.SingleValues.Char));
             Assert.Equal("SingleValues.String", this.PropertyTrail<AllValues>(x => x.SingleValues.String));
             Assert.Equal("SingleValues.Int", this.PropertyTrail<AllValues>(x => x.SingleValues.Int));
             Assert.Equal("SingleValues.IntNull", this.PropertyTrail<AllValues>(x => x.SingleValues.IntNull));
@@ -62,6 +65,7 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
             Assert.Equal("SingleValues.Bool", this.PropertyTrail<AllValues>(x => x.SingleValues.Bool));
             Assert.Equal("SingleValues.BoolNull", this.PropertyTrail<AllValues>(x => x.SingleValues.BoolNull));
 
+            Assert.Equal("ArrayValues.Char", this.PropertyTrail<AllValues>(x => x.ArrayValues.Char));
             Assert.Equal("ArrayValues.String", this.PropertyTrail<AllValues>(x => x.ArrayValues.String));
             Assert.Equal("ArrayValues.Int", this.PropertyTrail<AllValues>(x => x.ArrayValues.Int));
             Assert.Equal("ArrayValues.Long", this.PropertyTrail<AllValues>(x => x.ArrayValues.Long));

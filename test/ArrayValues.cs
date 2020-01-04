@@ -5,6 +5,9 @@ namespace BitHelp.Core.Extend.Test
 {
     public class ArrayValues
     {
+        [Display(Name = "Array char")]
+        public char[] Char { get; set; }
+
         [Display(Name = "Array string")]
         public string[] String { get; set; }
 

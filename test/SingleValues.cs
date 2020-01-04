@@ -5,6 +5,8 @@ namespace BitHelp.Core.Extend.Test
 {
     public class SingleValues
     {
+        public char Char { get; set; }
+
         public string String { get; set; }
 
         public int Int { get; set; }

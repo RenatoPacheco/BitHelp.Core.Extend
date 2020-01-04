@@ -17,6 +17,7 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
             SingleValues singles = new SingleValues();
             ArrayValues arrays = new ArrayValues();
 
+            Assert.Equal(nameof(singles.Char), this.PropertyName<SingleValues>(x => x.Char));
             Assert.Equal(nameof(singles.String), this.PropertyName<SingleValues>(x => x.String));
             Assert.Equal(nameof(singles.Int), this.PropertyName<SingleValues>(x => x.Int));
             Assert.Equal(nameof(singles.IntNull), this.PropertyName<SingleValues>(x => x.IntNull));
@@ -33,6 +34,7 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
             Assert.Equal(nameof(singles.Bool), this.PropertyName<SingleValues>(x => x.Bool));
             Assert.Equal(nameof(singles.BoolNull), this.PropertyName<SingleValues>(x => x.BoolNull));
 
+            Assert.Equal(nameof(arrays.Char), this.PropertyName<ArrayValues>(x => x.Char));
             Assert.Equal(nameof(arrays.String), this.PropertyName<ArrayValues>(x => x.String));
             Assert.Equal(nameof(arrays.Int), this.PropertyName<ArrayValues>(x => x.Int));
             Assert.Equal(nameof(arrays.Long), this.PropertyName<ArrayValues>(x => x.Long));
