@@ -22,7 +22,7 @@ dotnet pack src --configuration Release
 Once the package has been created, run the publish script as shown below:
 
 ```sh
-dotnet push nuget/BitHelp.Core.Extend.[set version].nupkg [set your password] -Source https://api.nuget.org/v3/index.json
+dotnet nuget push nuget/BitHelp.Core.Extend.[set version].nupkg -k [set your password] -s https://api.nuget.org/v3/index.json
 ```
 
 [BitHelp.Core.Extend.csproj]: <../src/BitHelp.Core.Extend.csproj>
