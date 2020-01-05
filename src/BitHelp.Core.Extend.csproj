@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <Version>0.1.0</Version>
     <Authors>Renato Pacheco</Authors>
@@ -10,10 +9,15 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageOutputPath>../nuget</PackageOutputPath>
-    <Description>This package adds an Extend!</Description>
+    <Description>This project has extensions to C # base elements to make it easier to extract or manipulate data.</Description>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/RenatoPacheco/BitHelp.Core.Extend</RepositoryUrl>
-    <PackageReleaseNotes>Release package adds an Extend!</PackageReleaseNotes>
+    <PackageReleaseNotes>Including extensions for:
+* Class
+* Enum
+* List
+* Type
+* Expression</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
