@@ -16,7 +16,7 @@ More details on how to configure the dotnet CLI package, [click here].
 To generate the package, run the script below from the project root:
 
 ```sh
-nuget pack src
+dotnet pack src --configuration Release
 ```
 
 Once the package has been created, run the publish script as shown below:
