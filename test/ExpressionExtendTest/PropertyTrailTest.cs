@@ -14,35 +14,35 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
         [Fact]
         public void Check_property_trail()
         {
-            SingleValues singles = new SingleValues();
-            ArrayValues arrays = new ArrayValues();
+            SingleValues single = new SingleValues();
+            ArrayValues array = new ArrayValues();
 
-            Assert.Equal(nameof(singles.Char), this.PropertyTrail<SingleValues>(x => x.Char));
-            Assert.Equal(nameof(singles.String), this.PropertyTrail<SingleValues>(x => x.String));
-            Assert.Equal(nameof(singles.Int), this.PropertyTrail<SingleValues>(x => x.Int));
-            Assert.Equal(nameof(singles.IntNull), this.PropertyTrail<SingleValues>(x => x.IntNull));
-            Assert.Equal(nameof(singles.Long), this.PropertyTrail<SingleValues>(x => x.Long));
-            Assert.Equal(nameof(singles.LongNull), this.PropertyTrail<SingleValues>(x => x.LongNull));
-            Assert.Equal(nameof(singles.Decimal), this.PropertyTrail<SingleValues>(x => x.Decimal));
-            Assert.Equal(nameof(singles.DecimalNull), this.PropertyTrail<SingleValues>(x => x.DecimalNull));
-            Assert.Equal(nameof(singles.Uint), this.PropertyTrail<SingleValues>(x => x.Uint));
-            Assert.Equal(nameof(singles.UintNull), this.PropertyTrail<SingleValues>(x => x.UintNull));
-            Assert.Equal(nameof(singles.DateTime), this.PropertyTrail<SingleValues>(x => x.DateTime));
-            Assert.Equal(nameof(singles.DateTimeNull), this.PropertyTrail<SingleValues>(x => x.DateTimeNull));
-            Assert.Equal(nameof(singles.Guid), this.PropertyTrail<SingleValues>(x => x.Guid));
-            Assert.Equal(nameof(singles.GuidNull), this.PropertyTrail<SingleValues>(x => x.GuidNull));
-            Assert.Equal(nameof(singles.Bool), this.PropertyTrail<SingleValues>(x => x.Bool));
-            Assert.Equal(nameof(singles.BoolNull), this.PropertyTrail<SingleValues>(x => x.BoolNull));
+            Assert.Equal(nameof(single.Char), this.PropertyTrail<SingleValues>(x => x.Char));
+            Assert.Equal(nameof(single.String), this.PropertyTrail<SingleValues>(x => x.String));
+            Assert.Equal(nameof(single.Int), this.PropertyTrail<SingleValues>(x => x.Int));
+            Assert.Equal(nameof(single.IntNull), this.PropertyTrail<SingleValues>(x => x.IntNull));
+            Assert.Equal(nameof(single.Long), this.PropertyTrail<SingleValues>(x => x.Long));
+            Assert.Equal(nameof(single.LongNull), this.PropertyTrail<SingleValues>(x => x.LongNull));
+            Assert.Equal(nameof(single.Decimal), this.PropertyTrail<SingleValues>(x => x.Decimal));
+            Assert.Equal(nameof(single.DecimalNull), this.PropertyTrail<SingleValues>(x => x.DecimalNull));
+            Assert.Equal(nameof(single.Uint), this.PropertyTrail<SingleValues>(x => x.Uint));
+            Assert.Equal(nameof(single.UintNull), this.PropertyTrail<SingleValues>(x => x.UintNull));
+            Assert.Equal(nameof(single.DateTime), this.PropertyTrail<SingleValues>(x => x.DateTime));
+            Assert.Equal(nameof(single.DateTimeNull), this.PropertyTrail<SingleValues>(x => x.DateTimeNull));
+            Assert.Equal(nameof(single.Guid), this.PropertyTrail<SingleValues>(x => x.Guid));
+            Assert.Equal(nameof(single.GuidNull), this.PropertyTrail<SingleValues>(x => x.GuidNull));
+            Assert.Equal(nameof(single.Bool), this.PropertyTrail<SingleValues>(x => x.Bool));
+            Assert.Equal(nameof(single.BoolNull), this.PropertyTrail<SingleValues>(x => x.BoolNull));
 
-            Assert.Equal(nameof(arrays.Char), this.PropertyTrail<ArrayValues>(x => x.Char));
-            Assert.Equal(nameof(arrays.String), this.PropertyTrail<ArrayValues>(x => x.String));
-            Assert.Equal(nameof(arrays.Int), this.PropertyTrail<ArrayValues>(x => x.Int));
-            Assert.Equal(nameof(arrays.Long), this.PropertyTrail<ArrayValues>(x => x.Long));
-            Assert.Equal(nameof(arrays.Decimal), this.PropertyTrail<ArrayValues>(x => x.Decimal));
-            Assert.Equal(nameof(arrays.Uint), this.PropertyTrail<ArrayValues>(x => x.Uint));
-            Assert.Equal(nameof(arrays.DateTime), this.PropertyTrail<ArrayValues>(x => x.DateTime));
-            Assert.Equal(nameof(arrays.Guid), this.PropertyTrail<ArrayValues>(x => x.Guid));
-            Assert.Equal(nameof(arrays.Bool), this.PropertyTrail<ArrayValues>(x => x.Bool));
+            Assert.Equal(nameof(array.Char), this.PropertyTrail<ArrayValues>(x => x.Char));
+            Assert.Equal(nameof(array.String), this.PropertyTrail<ArrayValues>(x => x.String));
+            Assert.Equal(nameof(array.Int), this.PropertyTrail<ArrayValues>(x => x.Int));
+            Assert.Equal(nameof(array.Long), this.PropertyTrail<ArrayValues>(x => x.Long));
+            Assert.Equal(nameof(array.Decimal), this.PropertyTrail<ArrayValues>(x => x.Decimal));
+            Assert.Equal(nameof(array.Uint), this.PropertyTrail<ArrayValues>(x => x.Uint));
+            Assert.Equal(nameof(array.DateTime), this.PropertyTrail<ArrayValues>(x => x.DateTime));
+            Assert.Equal(nameof(array.Guid), this.PropertyTrail<ArrayValues>(x => x.Guid));
+            Assert.Equal(nameof(array.Bool), this.PropertyTrail<ArrayValues>(x => x.Bool));
         }
 
         [Fact]
