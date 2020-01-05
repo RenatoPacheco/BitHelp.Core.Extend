@@ -4,6 +4,7 @@ using System.Reflection;
 using System.Linq.Expressions;
 using System.Text.RegularExpressions;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace BitHelp.Core.Extend
 {
@@ -50,6 +51,18 @@ namespace BitHelp.Core.Extend
 
             display = (DisplayAttribute)property.GetCustomAttributes(typeof(DisplayAttribute), false)?.FirstOrDefault();
             result = display?.Name ?? result;
+
+            return result;
+        }
+
+        public static string PropertyDescription<T, P>(this Expression<Func<T, P>> expression)
+        {
+            PropertyInfo property = expression.PropertyInfo();
+            DescriptionAttribute display;
+            string result;
+
+            display = (DescriptionAttribute)property.GetCustomAttributes(typeof(DescriptionAttribute), false)?.FirstOrDefault();
+            result = display?.Description;
 
             return result;
         }
