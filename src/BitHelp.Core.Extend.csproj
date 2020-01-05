@@ -1,7 +1,19 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.2</TargetFramework>
+    <Version>0.1.0</Version>
+    <Authors>Renato Pacheco</Authors>
+    <PackageProjectUrl></PackageProjectUrl>
+    <NeutralLanguage>en</NeutralLanguage>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageOutputPath>../nuget</PackageOutputPath>
+    <Description>This package adds an Extend!</Description>
+    <RepositoryType>Git</RepositoryType>
+    <RepositoryUrl>https://github.com/RenatoPacheco/BitHelp.Core.Extend</RepositoryUrl>
+    <PackageReleaseNotes>Release package adds an Extend!</PackageReleaseNotes>
   </PropertyGroup>
 
 </Project>
