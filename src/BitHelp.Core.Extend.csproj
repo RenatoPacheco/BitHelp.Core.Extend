@@ -18,6 +18,7 @@
 * List
 * Type
 * Expression</PackageReleaseNotes>
+    <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
   </PropertyGroup>
 
 </Project>
