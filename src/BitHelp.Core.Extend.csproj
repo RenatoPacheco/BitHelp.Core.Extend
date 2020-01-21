@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <Version>0.1.0</Version>
+    <Version>0.2.0</Version>
     <Authors>Renato Pacheco</Authors>
     <PackageProjectUrl></PackageProjectUrl>
     <NeutralLanguage>en</NeutralLanguage>
@@ -12,13 +12,10 @@
     <Description>This project has extensions to C # base elements to make it easier to extract or manipulate data.</Description>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/RenatoPacheco/BitHelp.Core.Extend</RepositoryUrl>
-    <PackageReleaseNotes>Including extensions for:
-* Class
-* Enum
-* List
-* Type
-* Expression</PackageReleaseNotes>
+    <PackageReleaseNotes>Adding expression multi-level to PropertySetValue and PropertyGetValue</PackageReleaseNotes>
     <PackageLicenseUrl>https://licenses.nuget.org/MIT</PackageLicenseUrl>
+    <AssemblyVersion>0.2.0.0</AssemblyVersion>
+    <FileVersion>0.2.0.0</FileVersion>
   </PropertyGroup>
 
 </Project>
