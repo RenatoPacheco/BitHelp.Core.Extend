@@ -8,8 +8,8 @@ namespace BitHelp.Core.Extend
         public static void PropertySetValue<T, P>(this T source, Expression<Func<T, P>> expression, P value)
             where T : class
         {
-            var property = expression.PropertyInfo();
-            property.SetValue(source, value);
+            var setterExpr = expression.CreateSetter();
+            setterExpr.Compile()(source, value);
         }
 
         public static object PropertyGetValue<T, P>(this T source, Expression<Func<T, P>> expression)

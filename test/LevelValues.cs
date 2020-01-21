@@ -6,8 +6,14 @@
 
         public string Protected { get; protected set; }
 
-        public string Internal { get; protected internal set; }
+        public string Internal { get; internal set; }
 
-        public string Private { get; protected private set; }
+        public string ProtectedInternal { get; protected internal set; }
+
+        public string Private { get; private set; }
+
+        public string ProtectedPrivate { get; protected private set; }
+
+        public LevelValues SubLevel { get; set; }
     }
 }

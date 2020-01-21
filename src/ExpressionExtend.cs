@@ -72,5 +72,15 @@ namespace BitHelp.Core.Extend
             string result = expression.MemberExpression().ToString();
             return Regex.Replace(result, @"^[^\.]+\.|\)+$", "");
         }
+
+        public static Expression<Action<T, P>> CreateSetter<T, P>
+        (this Expression<Func<T, P>> expression)
+        {
+            var valueParam = Expression.Parameter(typeof(P));
+            var body = Expression.Assign(expression.Body, valueParam);
+            return Expression.Lambda<Action<T, P>>(body,
+                expression.Parameters.Single(),
+                valueParam);
+        }
     }
 }

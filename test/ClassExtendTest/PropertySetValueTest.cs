@@ -30,11 +30,88 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         }
 
         [Fact]
+        public void Set_property_protected_internal()
+        {
+            LevelValues level = new LevelValues();
+            level.PropertySetValue(x => x.ProtectedInternal, nameof(level.ProtectedInternal));
+            Assert.Equal(nameof(level.ProtectedInternal), level.ProtectedInternal);
+        }
+
+        [Fact]
         public void Set_property_private()
         {
             LevelValues level = new LevelValues();
             level.PropertySetValue(x => x.Private, nameof(level.Private));
             Assert.Equal(nameof(level.Private), level.Private);
+        }
+
+        [Fact]
+        public void Set_property_protected_private()
+        {
+            LevelValues level = new LevelValues();
+            level.PropertySetValue(x => x.ProtectedPrivate, nameof(level.ProtectedPrivate));
+            Assert.Equal(nameof(level.ProtectedPrivate), level.ProtectedPrivate);
+        }
+
+        [Fact]
+        public void Set_property_sub_level_public()
+        {
+            LevelValues level = new LevelValues();
+            level.SubLevel = new LevelValues();
+
+            level.PropertySetValue(x => x.SubLevel.Public, nameof(level.Public));
+            Assert.Equal(nameof(level.Public), level.SubLevel.Public);
+        }
+
+        [Fact]
+        public void Set_property_sub_level_protected()
+        {
+            LevelValues level = new LevelValues();
+            level.SubLevel = new LevelValues();
+
+            level.PropertySetValue(x => x.SubLevel.Protected, nameof(level.Protected));
+            Assert.Equal(nameof(level.Protected), level.SubLevel.Protected);
+        }
+
+        [Fact]
+        public void Set_property_sub_level_internal()
+        {
+            LevelValues level = new LevelValues();
+            level.SubLevel = new LevelValues();
+
+            level.PropertySetValue(x => x.SubLevel.Internal, nameof(level.Internal));
+            Assert.Equal(nameof(level.Internal), level.SubLevel.Internal);
+        }
+
+        [Fact]
+        public void Set_property_sub_level_private()
+        {
+            LevelValues level = new LevelValues();
+            level.SubLevel = new LevelValues();
+
+            level.PropertySetValue(x => x.SubLevel.Private, nameof(level.Private));
+            Assert.Equal(nameof(level.Private), level.SubLevel.Private);
+        }
+
+        [Fact]
+        public void Set_property_sub_level_multiple_properties()
+        {
+            LevelValues level = new LevelValues();
+            level.SubLevel = new LevelValues();
+
+            level.PropertySetValue(x => x.SubLevel.Public, nameof(level.Public));
+            level.PropertySetValue(x => x.SubLevel.Protected, nameof(level.Protected));
+            level.PropertySetValue(x => x.SubLevel.Internal, nameof(level.Internal));
+            level.PropertySetValue(x => x.SubLevel.ProtectedInternal, nameof(level.ProtectedInternal));
+            level.PropertySetValue(x => x.SubLevel.Private, nameof(level.Private));
+            level.PropertySetValue(x => x.SubLevel.ProtectedPrivate, nameof(level.ProtectedPrivate));
+
+            Assert.Equal(nameof(level.Public), level.SubLevel.Public);
+            Assert.Equal(nameof(level.Protected), level.SubLevel.Protected);
+            Assert.Equal(nameof(level.Internal), level.SubLevel.Internal);
+            Assert.Equal(nameof(level.ProtectedInternal), level.SubLevel.ProtectedInternal);
+            Assert.Equal(nameof(level.Private), level.SubLevel.Private);
+            Assert.Equal(nameof(level.ProtectedPrivate), level.SubLevel.ProtectedPrivate);
         }
 
         [Fact]
