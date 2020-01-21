@@ -15,8 +15,7 @@ namespace BitHelp.Core.Extend
         public static object PropertyGetValue<T, P>(this T source, Expression<Func<T, P>> expression)
             where T : class
         {
-            var property = expression.PropertyInfo();
-            return property.GetValue(source);
+            return expression.Compile().DynamicInvoke(source);
         }
 
         public static string PropertyName<T, P>(this T source, Expression<Func<T, P>> expression)

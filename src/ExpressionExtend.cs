@@ -73,8 +73,7 @@ namespace BitHelp.Core.Extend
             return Regex.Replace(result, @"^[^\.]+\.|\)+$", "");
         }
 
-        public static Expression<Action<T, P>> CreateSetter<T, P>
-        (this Expression<Func<T, P>> expression)
+        public static Expression<Action<T, P>> CreateSetter<T, P>(this Expression<Func<T, P>> expression)
         {
             var valueParam = Expression.Parameter(typeof(P));
             var body = Expression.Assign(expression.Body, valueParam);
