@@ -6,9 +6,9 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
 {
     public class PropertyNameTest
     {
-        private string PropertyName<T>(Expression<Func<T, object>> expressao)
+        private string PropertyName<T>(Expression<Func<T, object>> expression)
         {
-            return expressao.PropertyName();
+            return expression.PropertyName();
         }
 
         [Fact]

@@ -6,9 +6,9 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
 {
     public class PropertyTypeTest
     {
-        private Type PropertyType<T>(Expression<Func<T, object>> expressao)
+        private Type PropertyType<T>(Expression<Func<T, object>> expression)
         {
-            return expressao.PropertyType();
+            return expression.PropertyType();
         }
 
         [Fact]

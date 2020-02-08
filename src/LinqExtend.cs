@@ -8,7 +8,9 @@ namespace BitHelp.Core.Extend
         public static void ForEach<T>(this IEnumerable<T> source, Action<T> action)
         {
             foreach (var item in source)
+            {
                 action(item);
+            }
         }
 
         public static IEnumerable<T> DistinctBy<T, K>

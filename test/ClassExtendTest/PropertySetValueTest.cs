@@ -56,8 +56,10 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_sub_level_public()
         {
-            LevelValues level = new LevelValues();
-            level.SubLevel = new LevelValues();
+            LevelValues level = new LevelValues
+            {
+                SubLevel = new LevelValues()
+            };
 
             level.PropertySetValue(x => x.SubLevel.Public, nameof(level.Public));
             Assert.Equal(nameof(level.Public), level.SubLevel.Public);
@@ -66,8 +68,10 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_sub_level_protected()
         {
-            LevelValues level = new LevelValues();
-            level.SubLevel = new LevelValues();
+            LevelValues level = new LevelValues
+            {
+                SubLevel = new LevelValues()
+            };
 
             level.PropertySetValue(x => x.SubLevel.Protected, nameof(level.Protected));
             Assert.Equal(nameof(level.Protected), level.SubLevel.Protected);
@@ -76,8 +80,10 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_sub_level_internal()
         {
-            LevelValues level = new LevelValues();
-            level.SubLevel = new LevelValues();
+            LevelValues level = new LevelValues
+            {
+                SubLevel = new LevelValues()
+            };
 
             level.PropertySetValue(x => x.SubLevel.Internal, nameof(level.Internal));
             Assert.Equal(nameof(level.Internal), level.SubLevel.Internal);
@@ -86,8 +92,10 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_sub_level_private()
         {
-            LevelValues level = new LevelValues();
-            level.SubLevel = new LevelValues();
+            LevelValues level = new LevelValues
+            {
+                SubLevel = new LevelValues()
+            };
 
             level.PropertySetValue(x => x.SubLevel.Private, nameof(level.Private));
             Assert.Equal(nameof(level.Private), level.SubLevel.Private);
@@ -96,8 +104,10 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_sub_level_multiple_properties()
         {
-            LevelValues level = new LevelValues();
-            level.SubLevel = new LevelValues();
+            LevelValues level = new LevelValues
+            {
+                SubLevel = new LevelValues()
+            };
 
             level.PropertySetValue(x => x.SubLevel.Public, nameof(level.Public));
             level.PropertySetValue(x => x.SubLevel.Protected, nameof(level.Protected));

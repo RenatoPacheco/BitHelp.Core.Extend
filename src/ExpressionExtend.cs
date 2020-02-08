@@ -13,7 +13,9 @@ namespace BitHelp.Core.Extend
         public static MemberExpression MemberExpression(this Expression expression)
         {
             if (expression is UnaryExpression unary)
+            {
                 return ((MemberExpression)unary.Operand);
+            }
 
             return ((MemberExpression)expression);
         }

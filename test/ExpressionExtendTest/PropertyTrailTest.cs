@@ -6,9 +6,9 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
 {
     public class PropertyTrailTest
     {
-        private string PropertyTrail<T>(Expression<Func<T, object>> expressao)
+        private string PropertyTrail<T>(Expression<Func<T, object>> expression)
         {
-            return expressao.PropertyTrail();
+            return expression.PropertyTrail();
         }
 
         [Fact]
