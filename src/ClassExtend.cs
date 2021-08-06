@@ -51,6 +51,7 @@ namespace BitHelp.Core.Extend
             return expression.PropertyDescription();
         }
 
+        [Obsolete("Use PropertyPath")]
         public static string PropertyTrail<T, P>(this T source, Expression<Func<T, P>> expression)
             where T : class
         {
@@ -59,7 +60,18 @@ namespace BitHelp.Core.Extend
                 throw new ArgumentNullException(nameof(source));
             }
 
-            return expression.PropertyTrail();
+            return expression.PropertyPath();
+        }
+
+        public static string PropertyPath<T, P>(this T source, Expression<Func<T, P>> expression)
+            where T : class
+        {
+            if (source is null)
+            {
+                throw new ArgumentNullException(nameof(source));
+            }
+
+            return expression.PropertyPath();
         }
     }
 }

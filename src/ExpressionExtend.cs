@@ -53,7 +53,13 @@ namespace BitHelp.Core.Extend
             return expression.PropertyInfo().PropertyDescription();
         }
 
+        [Obsolete("Use PropertyPath")]
         public static string PropertyTrail<T, P>(this Expression<Func<T, P>> expression)
+        {
+            return expression.PropertyPath();
+        }
+
+        public static string PropertyPath<T, P>(this Expression<Func<T, P>> expression)
         {
             string result = expression.MemberExpression().ToString();
             return Regex.Replace(result, @"^[^\.]+\.|\)+$", "");
