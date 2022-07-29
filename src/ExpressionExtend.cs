@@ -67,8 +67,8 @@ namespace BitHelp.Core.Extend
 
         public static Expression<Action<T, P>> CreateSetter<T, P>(this Expression<Func<T, P>> expression)
         {
-            var valueParam = Expression.Parameter(typeof(P));
-            var body = Expression.Assign(expression.Body, valueParam);
+            ParameterExpression valueParam = Expression.Parameter(typeof(P));
+            BinaryExpression body = Expression.Assign(expression.Body, valueParam);
             return Expression.Lambda<Action<T, P>>(body,
                 expression.Parameters.Single(),
                 valueParam);
