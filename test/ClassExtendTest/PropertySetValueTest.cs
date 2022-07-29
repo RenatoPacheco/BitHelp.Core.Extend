@@ -8,7 +8,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_public()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             level.PropertySetValue(x => x.Public, nameof(level.Public));
             Assert.Equal(nameof(level.Public), level.Public);
         }
@@ -16,7 +16,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_protected()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             level.PropertySetValue(x => x.Protected, nameof(level.Protected));
             Assert.Equal(nameof(level.Protected), level.Protected);
         }
@@ -24,7 +24,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_internal()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             level.PropertySetValue(x => x.Internal, nameof(level.Internal));
             Assert.Equal(nameof(level.Internal), level.Internal);
         }
@@ -32,7 +32,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_protected_internal()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             level.PropertySetValue(x => x.ProtectedInternal, nameof(level.ProtectedInternal));
             Assert.Equal(nameof(level.ProtectedInternal), level.ProtectedInternal);
         }
@@ -40,7 +40,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_private()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             level.PropertySetValue(x => x.Private, nameof(level.Private));
             Assert.Equal(nameof(level.Private), level.Private);
         }
@@ -48,7 +48,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_protected_private()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             level.PropertySetValue(x => x.ProtectedPrivate, nameof(level.ProtectedPrivate));
             Assert.Equal(nameof(level.ProtectedPrivate), level.ProtectedPrivate);
         }
@@ -58,7 +58,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         {
             LevelValues level = new LevelValues
             {
-                SubLevel = new LevelValues()
+                SubLevel = new()
             };
 
             level.PropertySetValue(x => x.SubLevel.Public, nameof(level.Public));
@@ -70,7 +70,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         {
             LevelValues level = new LevelValues
             {
-                SubLevel = new LevelValues()
+                SubLevel = new()
             };
 
             level.PropertySetValue(x => x.SubLevel.Protected, nameof(level.Protected));
@@ -82,7 +82,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         {
             LevelValues level = new LevelValues
             {
-                SubLevel = new LevelValues()
+                SubLevel = new()
             };
 
             level.PropertySetValue(x => x.SubLevel.Internal, nameof(level.Internal));
@@ -94,7 +94,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         {
             LevelValues level = new LevelValues
             {
-                SubLevel = new LevelValues()
+                SubLevel = new()
             };
 
             level.PropertySetValue(x => x.SubLevel.Private, nameof(level.Private));
@@ -106,7 +106,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         {
             LevelValues level = new LevelValues
             {
-                SubLevel = new LevelValues()
+                SubLevel = new()
             };
 
             level.PropertySetValue(x => x.SubLevel.Public, nameof(level.Public));
@@ -127,7 +127,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Set_property_single()
         {
-            SingleValues single = new SingleValues();
+            SingleValues single = new();
             DateTime date = DateTime.Now;
             Guid guid = Guid.NewGuid();
 

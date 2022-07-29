@@ -8,7 +8,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Get_property_public()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             string value = $"value: {nameof(level.Public)}";
 
             level.PropertySetValue(x => x.Public, value);
@@ -18,7 +18,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Get_property_protected()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             string value = $"value: {nameof(level.Protected)}";
 
             level.PropertySetValue(x => x.Protected, value);
@@ -28,7 +28,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Get_property_internal()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             string value = $"value: {nameof(level.Internal)}";
 
             level.PropertySetValue(x => x.Internal, value);
@@ -38,7 +38,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Get_property_protected_internal()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             string value = $"value: {nameof(level.ProtectedInternal)}";
 
             level.PropertySetValue(x => x.ProtectedInternal, value);
@@ -48,7 +48,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Get_property_private()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             string value = $"value: {nameof(level.Private)}";
 
             level.PropertySetValue(x => x.Private, value);
@@ -58,7 +58,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Get_property_protected_private()
         {
-            LevelValues level = new LevelValues();
+            LevelValues level = new();
             string value = $"value: {nameof(level.ProtectedPrivate)}";
 
             level.PropertySetValue(x => x.ProtectedPrivate, value);
@@ -70,7 +70,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         {
             LevelValues level = new LevelValues
             {
-                SubLevel = new LevelValues()
+                SubLevel = new()
             };
             string value = $"value level: {nameof(level.Public)}";
 
@@ -83,7 +83,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         {
             LevelValues level = new LevelValues
             {
-                SubLevel = new LevelValues()
+                SubLevel = new()
             };
             string value = $"value level: {nameof(level.Protected)}";
 
@@ -96,7 +96,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         {
             LevelValues level = new LevelValues
             {
-                SubLevel = new LevelValues()
+                SubLevel = new()
             };
             string value = $"value level: {nameof(level.Internal)}";
 
@@ -109,7 +109,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         {
             LevelValues level = new LevelValues
             {
-                SubLevel = new LevelValues()
+                SubLevel = new()
             };
             string value = $"value level: {nameof(level.Private)}";
 
@@ -120,7 +120,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Get_property_single()
         {
-            SingleValues single = new SingleValues();
+            SingleValues single = new();
             DateTime date = DateTime.Now;
             Guid guid = Guid.NewGuid();
 

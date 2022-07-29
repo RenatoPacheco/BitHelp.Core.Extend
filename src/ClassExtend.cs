@@ -8,7 +8,7 @@ namespace BitHelp.Core.Extend
         public static void PropertySetValue<T, P>(this T source, Expression<Func<T, P>> expression, P value)
             where T : class
         {
-            var setterExpr = expression.CreateSetter();
+            Expression<Action<T, P>> setterExpr = expression.CreateSetter();
             setterExpr.Compile()(source, value);
         }
 
@@ -21,33 +21,18 @@ namespace BitHelp.Core.Extend
         public static string PropertyName<T, P>(this T source, Expression<Func<T, P>> expression)
             where T : class
         {
-            if (source is null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
             return expression.PropertyName();
         }
 
         public static string PropertyDisplay<T, P>(this T source, Expression<Func<T, P>> expression)
             where T : class
         {
-            if (source is null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
             return expression.PropertyDisplay();
         }
 
         public static string PropertyDescription<T, P>(this T source, Expression<Func<T, P>> expression)
             where T : class
         {
-            if (source is null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
             return expression.PropertyDescription();
         }
 
@@ -55,22 +40,12 @@ namespace BitHelp.Core.Extend
         public static string PropertyTrail<T, P>(this T source, Expression<Func<T, P>> expression)
             where T : class
         {
-            if (source is null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
             return expression.PropertyPath();
         }
 
         public static string PropertyPath<T, P>(this T source, Expression<Func<T, P>> expression)
             where T : class
         {
-            if (source is null)
-            {
-                throw new ArgumentNullException(nameof(source));
-            }
-
             return expression.PropertyPath();
         }
     }
