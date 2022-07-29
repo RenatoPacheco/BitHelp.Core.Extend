@@ -7,8 +7,8 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Check_property_disply()
         {
-            SingleValues single = new SingleValues();
-            ArrayValues array = new ArrayValues();
+            SingleValues single = new();
+            ArrayValues array = new();
 
             Assert.Equal(nameof(single.Char), single.PropertyDisplay(x => x.Char));
             Assert.Equal(nameof(single.String), single.PropertyDisplay(x => x.String));
@@ -41,7 +41,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Check_property_display_in_subclass()
         {
-            AllValues all = new AllValues();
+            AllValues all = new();
 
             Assert.Equal("String", all.PropertyDisplay(x => x.SingleValues.String));
             Assert.Equal("Int null", all.PropertyDisplay(x => x.SingleValues.IntNull));

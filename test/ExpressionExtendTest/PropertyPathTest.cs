@@ -14,8 +14,8 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
         [Fact]
         public void Check_property_trail()
         {
-            SingleValues single = new SingleValues();
-            ArrayValues array = new ArrayValues();
+            SingleValues single = new();
+            ArrayValues array = new();
 
             Assert.Equal(nameof(single.Char), PropertyPath<SingleValues>(x => x.Char));
             Assert.Equal(nameof(single.String), PropertyPath<SingleValues>(x => x.String));

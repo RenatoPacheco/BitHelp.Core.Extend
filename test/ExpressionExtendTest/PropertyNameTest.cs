@@ -14,8 +14,8 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
         [Fact]
         public void Check_property_name()
         {
-            SingleValues single = new SingleValues();
-            ArrayValues array = new ArrayValues();
+            SingleValues single = new();
+            ArrayValues array = new();
 
             Assert.Equal(nameof(single.Char), PropertyName<SingleValues>(x => x.Char));
             Assert.Equal(nameof(single.String), PropertyName<SingleValues>(x => x.String));
@@ -48,8 +48,8 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
         [Fact]
         public void Check_property_name_in_subclass()
         {
-            SingleValues single = new SingleValues();
-            ArrayValues array = new ArrayValues();
+            SingleValues single = new();
+            ArrayValues array = new();
 
             Assert.Equal(nameof(single.String), PropertyName<AllValues>(x => x.SingleValues.String));
             Assert.Equal(nameof(array.String), PropertyName<AllValues>(x => x.ArrayValues.String));

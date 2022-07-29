@@ -8,8 +8,8 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Check_property_trail()
         {
-            SingleValues single = new SingleValues();
-            ArrayValues array = new ArrayValues();
+            SingleValues single = new();
+            ArrayValues array = new();
 
             Assert.Equal(nameof(single.Char), single.PropertyTrail(x => x.Char));
             Assert.Equal(nameof(single.String), single.PropertyTrail(x => x.String));
@@ -42,7 +42,7 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         [Fact]
         public void Check_property_trail_in_subclass()
         {
-            AllValues all = new AllValues();
+            AllValues all = new();
 
             Assert.Equal("SingleValues.Char", all.PropertyTrail(x => x.SingleValues.Char));
             Assert.Equal("SingleValues.String", all.PropertyTrail(x => x.SingleValues.String));

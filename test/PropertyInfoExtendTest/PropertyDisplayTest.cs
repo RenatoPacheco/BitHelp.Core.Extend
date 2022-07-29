@@ -1,14 +1,16 @@
 ﻿using Xunit;
 using System;
 using System.Linq.Expressions;
+using System.Reflection;
 
-namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
+namespace BitHelp.Core.Extend.Test.PropertyInfoExtendTest
 {
     public class PropertyDisplayTest
     {
         private static string PropertyDisplay<T>(Expression<Func<T, object>> expression)
         {
-            return expression.PropertyDisplay();
+            PropertyInfo propertyInfo = expression.PropertyInfo();
+            return propertyInfo.PropertyDisplay();
         }
 
         [Fact]
