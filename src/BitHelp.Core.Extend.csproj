@@ -9,15 +9,28 @@
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageOutputPath>../nuget</PackageOutputPath>
-    <Description>This project has extensions to C # base elements to make it easier to extract or manipulate data.</Description>
+    <Description>Project for data validation.</Description>
     <RepositoryType>Git</RepositoryType>
     <RepositoryUrl>https://github.com/RenatoPacheco/BitHelp.Core.Extend</RepositoryUrl>
-    <PackageReleaseNotes>Adding extensions to get DisplayName and Description in PropertyInfo</PackageReleaseNotes>
-    <PackageLicense>MIT</PackageLicense>
+    <PackageReleaseNotes>
+      Read release in: https://github.com/RenatoPacheco/BitHelp.Core.Extend/blob/master/RELEASES.md
+    </PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>validation;netcore</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
+      <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="System.ComponentModel.Annotations" Version="4.7.0" />
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
