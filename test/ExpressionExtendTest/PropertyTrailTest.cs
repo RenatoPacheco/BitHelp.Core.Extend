@@ -8,7 +8,9 @@ namespace BitHelp.Core.Extend.Test.ExpressionExtendTest
     {
         private static string PropertyTrail<T>(Expression<Func<T, object>> expression)
         {
+#pragma warning disable CS0618 // Type or member is obsolete
             return expression.PropertyTrail();
+#pragma warning restore CS0618 // Type or member is obsolete
         }
 
         [Fact]

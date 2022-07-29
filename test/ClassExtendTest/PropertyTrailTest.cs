@@ -1,5 +1,6 @@
 ﻿using Xunit;
 
+#pragma warning disable CS0618 // Type or member is obsolete
 namespace BitHelp.Core.Extend.Test.ClassExtendTest
 {
     public class PropertyTrailTest
@@ -72,3 +73,4 @@ namespace BitHelp.Core.Extend.Test.ClassExtendTest
         }
     }
 }
+#pragma warning restore CS0618 // Type or member is obsolete
