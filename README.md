@@ -27,21 +27,12 @@ dotnet add package BitHelp.Core.Extend
 
 ## Latest releases
 
-#### Release 0.5.0
+## Release 0.6.0
 
-**Features:**
+- feature: Adding method DoesCultureExist to strings
+- feature: Adding method NonCultureExist to strings
 
-- Adding PropertyPath and depreciating PropertyTrail
-
-**Others:**
-
-- Ignoring CS0618: Type or member is obsolete
-- Update project test to .net 5.0
-- Adding github action Integration Tests
-- Adding github action Build & Publish to NuGet
-- Adding README.md and RELEASES.md
-
-To read about others releases access [RELEASES.md](./RELEASES.md)
+To read about others releases access [RELEASES.md](https://github.com/RenatoPacheco/BitHelp.Core.Extend/blob/master/RELEASES.md)
 
 # Build and Test
 
