@@ -1,5 +1,10 @@
 # BitHelp.Core.Extend
 
+## Release 0.6.0
+
+- feature: Adding method DoesCultureExist to strings
+- feature: Adding method NonCultureExist to strings
+
 ## Release 0.5.0
 
 **Features:**
