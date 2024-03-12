@@ -3,7 +3,7 @@ using Xunit;
 
 namespace BitHelp.Core.Extend.Test.EnumExtendTest
 {
-    public class DescriptionEnumExtendTest
+    public class DescriptionTest
     {
         [Fact]
         public void Check_contain_description()

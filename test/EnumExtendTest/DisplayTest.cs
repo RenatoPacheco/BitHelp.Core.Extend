@@ -3,7 +3,7 @@ using Xunit;
 
 namespace BitHelp.Core.Extend.Test.EnumExtendTest
 {
-    public class DisplayEnumExtendTest
+    public class DisplayTest
     {
         [Fact]
         public void Check_contain_display()

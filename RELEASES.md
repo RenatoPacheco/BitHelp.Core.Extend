@@ -1,5 +1,9 @@
 # BitHelp.Core.Extend
 
+## Release 0.7.0
+
+feature: Adding Struct extend to get Display and Description
+
 ## Release 0.6.0
 
 - feature: Adding method DoesCultureExist to strings

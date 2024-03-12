@@ -27,10 +27,9 @@ dotnet add package BitHelp.Core.Extend
 
 ## Latest releases
 
-## Release 0.6.0
+## Release 0.7.0
 
-- feature: Adding method DoesCultureExist to strings
-- feature: Adding method NonCultureExist to strings
+feature: Adding Struct extend to get Display and Description
 
 To read about others releases access [RELEASES.md](https://github.com/RenatoPacheco/BitHelp.Core.Extend/blob/master/RELEASES.md)
 
@@ -64,7 +63,7 @@ dotnet tool install --global dotnet-reportgenerator-globaltool --version 4.8.6
 To generate the test report, run the command below:
 
 ```
-rm -rf ./coverage ./test/bin ./src/bin
+rm -rf ./coverage ./test/bin ./src/bin ./TestResults
 dotnet restore
 dotnet build --no-restore
 dotnet test --no-build --verbosity=normal --collect:"XPlat Code Coverage" --results-directory ./coverage
